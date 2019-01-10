@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".HomeActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/ToolbarAtas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:elevation="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="SiKawan"
+            android:textColor="@color/colorBlue"
+            android:textSize="20sp" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/ToolbarBawah"
+        app:layout_constraintTop_toBottomOf="@+id/ToolbarAtas">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_gradient">
+
+                    <ImageView
+                        android:id="@+id/imgOrang"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/orang2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:text="Rini Setiawati"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/imgOrang"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvSekolah"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:text="SMA N 3 Yogyakarta"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/imgOrang"
+                        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+                    <TextView
+                        android:id="@+id/tvKehadiran"
+                        android:layout_width="wrap_content"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="Kehadiran hari ini:"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imgOrang" />
+
+                    <TextView
+                        android:id="@+id/tvJumlahKehadiran"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:text="Penuh"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/tvKehadiran"
+                        app:layout_constraintTop_toBottomOf="@+id/imgOrang" />
+
+
+                </android.support.constraint.ConstraintLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvEksplor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/quicksand_regular"
+                android:text="Eksplor"
+                android:textColor="@color/colorText"
+                app:layout_constraintStart_toStartOf="@+id/cardView"
+                app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/crdNilai"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                card_view:cardCornerRadius="3dp"
+                card_view:cardElevation="2dp"
+                card_view:layout_constraintEnd_toStartOf="@+id/crdPresensi"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toBottomOf="@+id/tvEksplor">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp">
+
+                    <ImageView
+                        android:id="@+id/imgKonsultasi"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/nilai"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvKonsultasi"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="Nilai"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorBlue"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintVertical_bias="0.25"
+                        card_view:layout_constraintEnd_toEndOf="@+id/imgKonsultasi"
+                        card_view:layout_constraintStart_toStartOf="@+id/imgKonsultasi"
+                        card_view:layout_constraintTop_toBottomOf="@+id/imgKonsultasi" />
+
+
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/crdPresensi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                card_view:cardCornerRadius="3dp"
+                card_view:cardElevation="2dp"
+                card_view:layout_constraintEnd_toStartOf="@+id/crdBasis"
+                card_view:layout_constraintStart_toEndOf="@+id/crdNilai"
+                card_view:layout_constraintTop_toBottomOf="@+id/tvEksplor">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp">
+
+                    <ImageView
+                        android:id="@+id/imgRiwayat"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/presensi"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvRiwayat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="Presensi"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorBlue"
+                        android:textSize="11sp"
+                        card_view:layout_constraintEnd_toEndOf="@+id/imgRiwayat"
+                        card_view:layout_constraintStart_toStartOf="@+id/imgRiwayat"
+                        card_view:layout_constraintTop_toBottomOf="@+id/imgRiwayat" />
+
+
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/crdBasis"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="32dp"
+                card_view:cardCornerRadius="3dp"
+                card_view:cardElevation="2dp"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintStart_toEndOf="@+id/crdPresensi"
+                card_view:layout_constraintTop_toBottomOf="@+id/tvEksplor">
+
+                <android.support.constraint.ConstraintLayout
+                    android:onClick="lapor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp">
+
+                    <ImageView
+                        android:id="@+id/imgBasis"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/report"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvBasis"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="Lapor"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorBlue"
+                        android:textSize="11sp"
+                        card_view:layout_constraintEnd_toEndOf="@+id/imgBasis"
+                        card_view:layout_constraintStart_toStartOf="@+id/imgBasis"
+                        card_view:layout_constraintTop_toBottomOf="@+id/imgBasis" />
+
+
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:background="#ece8e8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/crdPresensi" />
+
+            <TextView
+                android:id="@+id/tvKehadiranPekan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/quicksand_regular"
+                android:text="Kehadiran Pekan Ini"
+                android:textColor="@color/colorText"
+                app:layout_constraintStart_toStartOf="@+id/tvEksplor"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <TextView
+                android:id="@+id/tvPenuh"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_biru"
+                android:fontFamily="@font/quicksand_bold"
+                android:gravity="center"
+                android:text="5"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toStartOf="@+id/tvTidakPenuh"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvKehadiranPekan" />
+
+            <TextView
+                android:id="@+id/tvTidakPenuh"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/bg_kuning"
+                android:fontFamily="@font/quicksand_bold"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toStartOf="@+id/tvSakit"
+                app:layout_constraintStart_toEndOf="@+id/tvPenuh"
+                app:layout_constraintTop_toBottomOf="@+id/tvKehadiranPekan" />
+
+            <TextView
+                android:id="@+id/tvSakit"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_hijau"
+                android:fontFamily="@font/quicksand_bold"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toStartOf="@+id/tvAlpha"
+                app:layout_constraintStart_toEndOf="@+id/tvTidakPenuh"
+                app:layout_constraintTop_toBottomOf="@+id/tvKehadiranPekan" />
+
+            <TextView
+                android:id="@+id/tvAlpha"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_oren"
+                android:fontFamily="@font/quicksand_bold"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvSakit"
+                app:layout_constraintTop_toBottomOf="@+id/tvKehadiranPekan" />
+
+            <TextView
+                android:id="@+id/tvPenuh_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/quicksand_regular"
+                android:text="Penuh"
+                android:textColor="@color/colorText"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvPenuh"
+                app:layout_constraintStart_toStartOf="@+id/tvPenuh"
+                app:layout_constraintTop_toBottomOf="@+id/tvPenuh" />
+
+            <TextView
+                android:id="@+id/tvTidakPenuh_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/quicksand_regular"
+                android:text="Tidak Penuh"
+                android:textColor="@color/colorText"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvTidakPenuh"
+                app:layout_constraintStart_toStartOf="@+id/tvTidakPenuh"
+                app:layout_constraintTop_toBottomOf="@+id/tvTidakPenuh" />
+
+            <TextView
+                android:id="@+id/tvSakit_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/quicksand_regular"
+                android:text="Sakit/Ijin"
+                android:textColor="@color/colorText"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvSakit"
+                app:layout_constraintStart_toStartOf="@+id/tvSakit"
+                app:layout_constraintTop_toBottomOf="@+id/tvSakit" />
+
+            <TextView
+                android:id="@+id/tvAlpha_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/quicksand_regular"
+                android:text="Alpha"
+                android:textColor="@color/colorText"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvAlpha"
+                app:layout_constraintStart_toStartOf="@+id/tvAlpha"
+                app:layout_constraintTop_toBottomOf="@+id/tvAlpha" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:background="#ece8e8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSakit_2" />
+
+            <TextView
+                android:id="@+id/NilaiPekan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/quicksand_regular"
+                android:text="Nilai Pekan Ini"
+                android:textColor="@color/colorText"
+                app:layout_constraintStart_toStartOf="@+id/tvKehadiranPekan"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+            <ScrollView
+                android:id="@+id/scrolnilai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/NilaiPekan">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/nilai_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="02/12/2018"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/jenisNilai1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="32dp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="Quiz"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/nilai_1"
+                        app:layout_constraintStart_toEndOf="@+id/nilai_1"
+                        app:layout_constraintTop_toTopOf="@+id/nilai_1" />
+
+                    <TextView
+                        android:id="@+id/matpel1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="32dp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="Bahasa Indonesia"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/jenisNilai1"
+                        app:layout_constraintStart_toEndOf="@+id/jenisNilai1"
+                        app:layout_constraintTop_toTopOf="@+id/jenisNilai1" />
+
+                    <TextView
+                        android:id="@+id/nilaimatpel1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="32dp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="86"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/matpel1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/matpel1" />
+
+
+                    <TextView
+                        android:id="@+id/nilai_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="02/12/2018"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/nilai_1"
+                        app:layout_constraintTop_toBottomOf="@+id/nilai_1" />
+
+                    <TextView
+                        android:id="@+id/jenisNilai2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="Tugas"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/jenisNilai1"
+                        app:layout_constraintTop_toBottomOf="@+id/jenisNilai1" />
+
+                    <TextView
+                        android:id="@+id/matpel2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="IPS"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/matpel1"
+                        app:layout_constraintTop_toBottomOf="@+id/matpel1" />
+
+                    <TextView
+                        android:id="@+id/nilaimatpel2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="86"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/nilaimatpel1"
+                        app:layout_constraintTop_toBottomOf="@+id/nilaimatpel1" />
+
+
+                    <TextView
+                        android:id="@+id/nilai_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="29/11/2018"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/nilai_2"
+                        app:layout_constraintTop_toBottomOf="@+id/nilai_2" />
+
+                    <TextView
+                        android:id="@+id/jenisNilai3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="Tugas"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/jenisNilai2"
+                        app:layout_constraintTop_toBottomOf="@+id/jenisNilai2" />
+
+                    <TextView
+                        android:id="@+id/matpel3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="Matematika"
+                        android:textColor="@color/colorYellow"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/matpel2"
+                        app:layout_constraintTop_toBottomOf="@+id/matpel2" />
+
+                    <TextView
+                        android:id="@+id/nilaimatpel3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="86"
+                        android:textColor="@color/colorYellow"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/nilaimatpel2"
+                        app:layout_constraintTop_toBottomOf="@+id/nilaimatpel2" />
+
+
+                    <TextView
+                        android:id="@+id/nilai_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="28/11/2018"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/nilai_3"
+                        app:layout_constraintTop_toBottomOf="@+id/nilai_3" />
+
+                    <TextView
+                        android:id="@+id/jenisNilai4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="Quiz"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/jenisNilai3"
+                        app:layout_constraintTop_toBottomOf="@+id/jenisNilai3" />
+
+                    <TextView
+                        android:id="@+id/matpel4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="IPA"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/matpel3"
+                        app:layout_constraintTop_toBottomOf="@+id/matpel3" />
+
+                    <TextView
+                        android:id="@+id/nilaimatpel4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="86"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/nilaimatpel3"
+                        app:layout_constraintTop_toBottomOf="@+id/nilaimatpel3" />
+
+
+                    <TextView
+                        android:id="@+id/nilai_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="28/11/2018"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/nilai_4"
+                        app:layout_constraintTop_toBottomOf="@+id/nilai_4" />
+
+                    <TextView
+                        android:id="@+id/jenisNilai5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="Tugas"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/jenisNilai4"
+                        app:layout_constraintTop_toBottomOf="@+id/jenisNilai4" />
+
+                    <TextView
+                        android:id="@+id/matpel5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="PKn"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/matpel4"
+                        app:layout_constraintTop_toBottomOf="@+id/matpel4" />
+
+                    <TextView
+                        android:id="@+id/nilaimatpel5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="86"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/nilaimatpel4"
+                        app:layout_constraintTop_toBottomOf="@+id/nilaimatpel4" />
+
+
+                </android.support.constraint.ConstraintLayout>
+
+            </ScrollView>
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="#ece8e8"
+                app:layout_constraintEnd_toEndOf="@+id/view2"
+                app:layout_constraintStart_toStartOf="@+id/view2"
+                app:layout_constraintTop_toBottomOf="@id/scrolnilai" />
+
+            <TextView
+                android:id="@+id/RekapNilai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/quicksand_regular"
+                android:text="Rekap Nilai"
+                android:textColor="@color/colorText"
+                app:layout_constraintStart_toStartOf="@+id/NilaiPekan"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+            <ImageView
+                android:id="@+id/imgData"
+                android:layout_width="350dp"
+                android:layout_height="250dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/rekapnilai"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/RekapNilai" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/ToolbarBawah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp">
+
+            <ImageView
+                android:id="@+id/btnHome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnLaporan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/btnLaporan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_report"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:onClick="listlaporan"
+                app:layout_constraintEnd_toStartOf="@+id/btnProfil"
+                app:layout_constraintStart_toEndOf="@+id/btnHome"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/btnProfil"
+                android:onClick="profile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_profile"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnLaporan"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+</android.support.constraint.ConstraintLayout>
