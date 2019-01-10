@@ -123,7 +123,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="16dpgi"
         android:fontFamily="@font/quicksand_regular"
         android:text="Kursi dan meja yang tersedia tidak sesuai jumlah murid. "
         app:layout_constraintEnd_toEndOf="parent"
