@@ -12,7 +12,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         Handler().postDelayed({
-            startActivity(Intent(this@SplashActivity, MasukActivity::class.java))
+            startActivity(Intent(this@SplashActivity, ViewPagerActivity::class.java))
             finish()
         }, 3000)
     }

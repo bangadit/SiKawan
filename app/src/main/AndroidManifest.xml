@@ -1,33 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="sikawan.sikawan">
+          package="sikawan.sikawan">
 
     <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
         <activity
-            android:name=".SplashActivity"
-            android:theme="@style/FullScreen">
+                android:name=".SplashActivity"
+                android:theme="@style/FullScreen">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".WelcomeActivity" />
-        <activity android:name=".MasukActivity" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".PasswordActivity" />
-        <activity android:name=".LaporActivity" />
-        <activity android:name=".Lapor2Activity" />
-        <activity android:name=".ListLaporanActivity" />
-        <activity android:name=".LihatLaporanActivity"></activity>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".WelcomeActivity"/>
+        <activity android:name=".MasukActivity"/>
+        <activity android:name=".HomeActivity"/>
+        <activity android:name=".ProfileActivity"/>
+        <activity android:name=".PasswordActivity"/>
+        <activity android:name=".LaporActivity"/>
+        <activity android:name=".Lapor2Activity"/>
+        <activity android:name=".ListLaporanActivity"/>
+        <activity android:name=".LihatLaporanActivity"/>
+        <activity android:name=".ViewPagerActivity"
+                  android:theme="@style/FullScreen">
+        </activity>
     </application>
 
 </manifest>
